@@ -8,7 +8,8 @@ import java.io.IOException;
 public class XMLServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("Call Get in XML Servlet");
+//        System.out.println("Call Get in XML Servlet");
+        response.getWriter().println("This is XML page");
     }
 
     @Override

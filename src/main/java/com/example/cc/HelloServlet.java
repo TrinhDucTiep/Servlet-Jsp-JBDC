@@ -1,6 +1,7 @@
 package com.example.cc;
 
 import java.io.*;
+import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
@@ -12,7 +13,7 @@ public class HelloServlet extends HttpServlet {
         message = "Hello World!";
     }
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
 
         // Hello
@@ -22,6 +23,12 @@ public class HelloServlet extends HttpServlet {
         out.println("</body></html>");
 
         System.out.println("called do get");
+
+        // forwarding to XML page
+//        getServletContext().getRequestDispatcher("/food").forward(request, response);
+
+        // redirect to youtube
+        response.sendRedirect("https://www.youtube.com/");
     }
 
     public void destroy() {
