@@ -10,6 +10,7 @@ public class XMLServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //        System.out.println("Call Get in XML Servlet");
         response.getWriter().println("This is XML page");
+        response.getWriter().println(getServletConfig().getInitParameter("localContextParam"));
     }
 
     @Override

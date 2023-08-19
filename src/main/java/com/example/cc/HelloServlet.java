@@ -5,7 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", urlPatterns = {"/hello-servlet", "/tiep"})
+@WebServlet(name = "helloServlet", urlPatterns = {"/hello-servlet", "/tiep"}, initParams = {@WebInitParam(name = "localContextParam2", value = "cha vac cuoc ra dong")})
 public class HelloServlet extends HttpServlet {
     private String message;
 
@@ -29,6 +29,8 @@ public class HelloServlet extends HttpServlet {
 
         // redirect to youtube
         response.sendRedirect("https://www.youtube.com/");
+
+        System.out.println(getServletConfig().getInitParameter("localContextParam2"));
     }
 
     public void destroy() {

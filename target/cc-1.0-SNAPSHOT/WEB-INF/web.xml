@@ -6,7 +6,12 @@
     <servlet>
         <servlet-name>XMLServlet</servlet-name>
         <servlet-class>com.example.cc.XMLServlet</servlet-class>
+        <init-param>
+            <param-name>localContextParam</param-name>
+            <param-value>que toi som tinh mo tieng ga goi</param-value>
+        </init-param>
     </servlet>
+
     <servlet-mapping>
         <servlet-name>XMLServlet</servlet-name>
         <url-pattern>/food</url-pattern>
@@ -16,4 +21,9 @@
         <servlet-name>XMLServlet</servlet-name>
         <url-pattern>/drink/*</url-pattern>
     </servlet-mapping>
+
+    <context-param>
+        <param-name>globalContextParam</param-name>
+        <param-value>dua gangz</param-value>
+    </context-param>
 </web-app>
