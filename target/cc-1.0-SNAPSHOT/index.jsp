@@ -1,3 +1,4 @@
+<%--This is page tag--%>
 <%@ page import="java.util.Date" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
@@ -42,6 +43,16 @@ declaration tag: use for define methods or attribute which are component of serv
     My name is <%= name %>
     I'm <%= add(11, 11) %> years old
 </h3>
+
+<%--
+Directive tag have 3 types:
+    + Page directive
+    + Include directive
+    + Tag lib directive
+--%>
+
+<%--This is include tag--%>
+<%@ include file="errorPage.jsp" %>
 
 </body>
 </html>
