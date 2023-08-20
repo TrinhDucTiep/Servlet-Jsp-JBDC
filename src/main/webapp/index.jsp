@@ -26,5 +26,22 @@ The differences between scriptlets tag and jsp expression tag is:
     Scriptlets tag use for embeded java code in
     Jsp expression tag just use for java but for expressing its value of the java expression (biểu thức java)
  --%>
+
+<%--
+declaration tag: use for define methods or attribute which are component of servelet (global scope compared to scriplets tag)
+--%>
+<%!
+    String name = "Trinh Duc Tiep";
+
+    int add(int a, int b) {
+        return a + b;
+    }
+%>
+
+<h3>
+    My name is <%= name %>
+    I'm <%= add(11, 11) %> years old
+</h3>
+
 </body>
 </html>
