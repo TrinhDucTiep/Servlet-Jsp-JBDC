@@ -15,5 +15,10 @@
 <%--    jsp expression--%>
     <%= new Date() %>
 </p>
+
+<%--scriptlets tag--%>
+<% for (int i = 0; i<=11; i++) { %>
+        <li>Items: <%=i%></li>
+    <%}%>
 </body>
 </html>
