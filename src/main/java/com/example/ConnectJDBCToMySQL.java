@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+// nhớ thêm thư viện mysql-connector vào external libraries (file > project structure > dependencies > add +)
 public class ConnectJDBCToMySQL {
 
     private static final String URL = "jdbc:mysql://localhost:3306/hello";
