@@ -36,4 +36,13 @@
         <location>/errorPage.jsp</location>
     </error-page>
 
+    <filter>
+        <filter-name>Logger</filter-name>
+        <filter-class>com.example.filter.Logger</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Logger</filter-name>
+        <url-pattern>/session2</url-pattern>
+    </filter-mapping>
+
 </web-app>
