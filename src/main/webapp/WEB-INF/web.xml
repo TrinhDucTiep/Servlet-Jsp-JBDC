@@ -44,5 +44,11 @@
         <filter-name>Logger</filter-name>
         <url-pattern>/session2</url-pattern>
     </filter-mapping>
+    
+    <context-param>
+        <description>Location to store uploaded file</description>
+        <param-name>file-upload</param-name>
+        <param-value>C:\Users\Admin\IdeaProjects\cc\uploaded_image\</param-value>
+    </context-param>
 
 </web-app>
